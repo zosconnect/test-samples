@@ -1,0 +1,29 @@
+openapi: 3.0.0
+info:
+  title: accounts
+  version: 1.0.0
+  description: API to retrieve and update accounts.
+servers:
+- url: /
+paths:
+  /accounts:
+    get:
+      description: Get a list of all accounts.
+      responses:
+        200:
+          description: Retrieved all accounts.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    accountId:
+                      type: integer
+                      example: 000150
+                    accountHolder:
+                      type: string
+                      example: Bruce Adamson
+                    accountDept:
+                      type: string
+                      example: D11
