@@ -1,0 +1,32 @@
+openapi: 3.0.0
+info:
+  title: EmployeesApi
+  description: Employee management API for Db2.
+  version: "1.1"
+servers:
+- url: /
+paths:
+  /employees:
+    get:
+      description: Uses the getEmployees Db2 z/OS asset
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  properties:
+                    employeeNumber:
+                      type: string
+                      example: "000150"
+                    firstName:
+                      type: string
+                      example: "BRUCE"
+                    lastName:
+                      type: string
+                      example: "ADAMSON"
+                    salary:
+                      type: number
+                      example: 25280
