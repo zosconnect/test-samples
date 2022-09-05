@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: EmployeesApi
   description: Employee management API for Db2.
-  version: "1.1"
+  version: "0.2"
 servers:
 - url: /
 paths:
